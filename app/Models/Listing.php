@@ -18,7 +18,9 @@ class Listing extends Model
             $query
             ->where('title', 'like', '%' . request('search') . '%')
             ->orWhere('description', 'like', '%' . request('search') . '%')
-            ->orWhere('tags', 'like', '%' . request('search') . '%');
+            ->orWhere('tags', 'like', '%' . request('search') . '%')
+            ->orWhere('location', 'like', '%' . request('search') . '%')
+            ->orWhere('company', 'like', '%' . request('search') . '%');
         }
     }
 }
