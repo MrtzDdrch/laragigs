@@ -24,12 +24,15 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 // All listings
 Route::get('/', [ListingController::class, 'index']);
 
+// Save new listing to database
+Route::post('/listings', [ListingController::class, 'store']);
+
+
+
 
 
 // Single listing
 Route::get('/listing/{listing}', [ListingController::class, 'show']);
-
-
 
 // Route::get('/hello', function(){
 //     return response("<h1>Hello World</h1>", 404)
