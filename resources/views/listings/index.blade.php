@@ -14,4 +14,5 @@
         @endforeach
 
     </div>
+    <div class="mt p-4">{{$listings->links()}}</div>
 @endsection
