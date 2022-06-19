@@ -33,7 +33,8 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
 // Update Listing
 Route::put('/listings/{listing}', [ListingController::class, 'update']);
 
-
+// Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 
 
 
@@ -61,4 +62,4 @@ Route::get('/listing/{listing}', [ListingController::class, 'show']);
 // store - Store new resource
 // edit - Show form to edit resource
 // update - update resource
-// destroy - relete resource
+// destroy - delete resource
