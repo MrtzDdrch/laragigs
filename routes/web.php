@@ -27,6 +27,12 @@ Route::get('/', [ListingController::class, 'index']);
 // Save new listing to database
 Route::post('/listings', [ListingController::class, 'store']);
 
+// Show Edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+// Update Listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
 
 
 
@@ -47,3 +53,12 @@ Route::get('/listing/{listing}', [ListingController::class, 'show']);
 // Route::get('/search', function(Request $request){
 //     return $request->name . ' ' . $request->city;
 // });
+
+// Common Resource Routes:
+// index - Show list of all resources
+// show - Show single resource
+// create - Show form to create new resource
+// store - Store new resource
+// edit - Show form to edit resource
+// update - update resource
+// destroy - relete resource
