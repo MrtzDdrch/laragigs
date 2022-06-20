@@ -19,7 +19,7 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="name"
-                value={{old('name')}}
+                value="{{old('name')}}"
             />
             @error('name')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -32,7 +32,7 @@
                 type="email"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="email"
-                value={{old('email')}}
+                value="{{old('email')}}"
             />
             @error('email')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -78,5 +78,6 @@
                 <a href="/login" class="text-laravel">Login</a>
             </p>
         </div>
-    </x-card>
-</div>
+
+    </form>
+</x-card>
